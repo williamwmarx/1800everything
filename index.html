@@ -12,6 +12,10 @@
 				box-sizing: border-box;
 			}
 
+			body {
+				overflow: hidden;
+			}
+
 			.main {
 				position: relative;
 				height: 100vh;
@@ -24,14 +28,14 @@
 				transform: translateY(-50%);
 			}
 
-			#leftpic {
+			#toppic {
 				margin-left: 50vw;
 				margin-bottom: 5vh;
 				width: 25vw;
 				transform: translateX(-50%);
 			}
 
-			#rightpic {
+			#bottompic {
 				margin-left: 50vw;
 				width: 25vw;
 				transform: translateX(-50%);
@@ -42,13 +46,20 @@
 		<div class="main">
 			<div class="inner">
 				<a href="https://www.instagram.com/p/By2awYXJu1j/" target="_blank">
-					<img id="leftpic" src="1800everything.jpg" alt="1800EVERYTHING"/>
+					<img id="toppic" src="1800everything.jpg" alt="1800EVERYTHING"/>
 				</a>
 				<br/>
 				<a href="https://www.instagram.com/p/1ZOsEHmge3/" target="_blank">
-					<img id="rightpic" src="youwilldie.jpg" alt="YOU WILL DIE"/>
+					<img id="bottompic" src="youwilldie.jpg" alt="YOU WILL DIE"/>
 				</a>
 			</div>
 		</div>
+		<script>
+			if (window.innerHeight > window.innerWidth) {
+				console.log("HERE")
+				document.getElementById("toppic").style.width = "30vh"
+				document.getElementById("bottompic").style.width = "30vh"
+			}
+		</script>
 	</body>
 </html>
